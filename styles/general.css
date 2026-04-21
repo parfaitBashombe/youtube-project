@@ -1,12 +1,45 @@
-p {
-  font-family: Roboto, arial;
-  font-size: 13px;
+/* =========================================
+   GENERAL — CSS Variables, Reset, Base
+   ========================================= */
+
+/* ---- Design Tokens ---- */
+:root {
+  --yt-red: #ff0000;
+  --yt-text-primary: #0f0f0f;
+  --yt-text-secondary: #606060;
+  --yt-bg: #f9f9f9;
+  --yt-white: #ffffff;
+  --yt-border: #e5e5e5;
+  --yt-hover-bg: #f2f2f2;
+  --yt-icon-hover: rgba(0, 0, 0, 0.08);
+  --yt-header-height: 56px;
+  --yt-sidebar-width: 72px;
+  --yt-avatar-size: 32px;
 }
 
+/* ---- Box-sizing Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ---- Base Body ---- */
 body {
   margin: 0;
-  padding-top: 80px;
-  padding-left: 97px;
+  padding-top: calc(var(--yt-header-height) + 16px);
+  padding-left: calc(var(--yt-sidebar-width) + 24px);
   padding-right: 24px;
-  background-color: rgb(248, 248, 248);
+  padding-bottom: 40px;
+  background-color: var(--yt-bg);
+  color: var(--yt-text-primary);
+}
+
+/* ---- Shared: Circular Avatar ---- */
+.avatar {
+  width: var(--yt-avatar-size);
+  height: var(--yt-avatar-size);
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
