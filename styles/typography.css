@@ -1,0 +1,41 @@
+/* =========================================
+   TYPOGRAPHY
+   Global font rules and text styles
+   ========================================= */
+
+/* Base font stack */
+body,
+input,
+button {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+/* Video title — 2-line clamp */
+.video-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--yt-text-primary);
+  margin: 0 0 6px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2; /* standard property for future compatibility */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Channel name under video */
+.video-author {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--yt-text-secondary);
+  margin: 0 0 4px 0;
+}
+
+/* View count + upload time */
+.video-stats {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--yt-text-secondary);
+  margin: 0;
+}

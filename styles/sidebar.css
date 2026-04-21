@@ -1,38 +1,57 @@
+/* =========================================
+   SIDEBAR — Fixed left navigation panel
+   ========================================= */
+
 .sidebar {
   position: fixed;
-  bottom: 0;
+  top: var(--yt-header-height);
   left: 0;
-  top: 60px;
-  width: 70px;
-  background-color: white;
-  padding-top: 6px;
-
+  bottom: 0;
+  width: var(--yt-sidebar-width);
+  background-color: var(--yt-white);
   display: flex;
   flex-direction: column;
-
-  font-size: 10px;
-  z-index: 200;
+  padding-top: 12px;
+  overflow-y: auto;
+  z-index: 90;
 }
 
+/* ---- Sidebar link item ---- */
 .sidebar-link {
-  height: 74px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  padding: 0 12px;
   cursor: pointer;
+  border-radius: 10px;
+  margin: 0 6px;
+  transition: background-color 0.1s;
+  text-decoration: none;
+  color: var(--yt-text-primary);
 }
 
 .sidebar-link:hover {
-  background-color: rgb(235, 235, 235);
+  background-color: var(--yt-hover-bg);
 }
 
+.sidebar-link.active {
+  background-color: var(--yt-hover-bg);
+}
+
+/* Icon */
 .sidebar-link img {
-  height: 30px;
-  margin-bottom: 5px;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 6px;
 }
 
+/* Label */
 .sidebar-link div {
-  font-family: roboto, arial;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 10px;
+  font-weight: 400;
+  color: var(--yt-text-primary);
+  text-align: center;
 }
